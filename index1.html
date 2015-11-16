@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Données en Biodiversité</title>
+
+		<meta name="description" content="Introduction aux bases de données en biodiversité">
+		<meta name="author" content="André Heughebaert">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+<div class="reveal">
+<!-- Any section element inside of this container is displayed as a slide -->
+	<div class="slides">
+		<section>
+			<h3>Introduction aux<br>bases de données<br>en biodiversité</h3>
+			<hr>
+			<p>Atelier CEBioS MRV, Septembre 2015<br><hr><br><small>André Heughebaert <br> <a href="http://www.biodiversity.be">Belgian Biodiversity Platform</a></small></p>
+		</section>
+
+		<section>
+			<h2>Contenu</h2>
+			<hr>
+			<ol>
+				<li><a href="#/Int">Introduction</a></li>
+				<li><a href="#/Don">Données</a></li>
+				<li><a href="#/Met">Metadonnées</a></li>
+				<li><a href="#/Sql">SQL</a></li>
+				<li><a href="#/Nos">NoSQL</a></li>
+				<li><a href="#/Out">Outils</a></li>
+				<li><a href="#/Out">Standards</a></li>
+			</ol>
+		</section>
+
+		<section>
+			<section id="Int">
+				<h4>1. Introduction</h4>
+				<hr>
+				<img src="images1/wordcloud.png" alt="wordCloud">
+			</section>
+			<section>
+				<h4>Données en Biodiversité</h4>
+				<hr>
+				<ul>
+					<li class=fragment>Taxonomie, noms vernaculaires, specimens types</li>
+					<li class=fragment>Population, habitat, aire de répartitition</li>
+					<li class=fragment>Description, traits, propriétés, génome</li> 
+					<li class=fragment>Relation entre espèces, ecosystèmes</li>
+					<li class=fragment>Observations, collections</li>
+					<li class=fragment>Indicateurs, modèles</li>
+					<hr>
+					<li class=fragment>Publications scientifiques (et autres)</li>
+					<li class=fragment>Multimedia: images, sons, vidéos...</li>
+					<li class=fragment>Droit: Législations, règlementations, aires protégées...</li>
+					<li class=fragment>Communauté d'experts, scientifiques, amateurs</li>
+				</ul>
+			</section>
+			<section>
+				<h4>Données-Information</h4>
+				<hr>
+				<img src="images1/pyramide.png" alt="pyramide">
+			</section>
+			<section>
+				<h4>Données-Information</h4>
+				<hr>
+				<p>Une <b>donnée</b> est une <u>description élémentaire d’une réalité</u>. C’est par exemple une observation ou une mesure.<br>
+					La donnée est dépourvue de tout raisonnement, supposition, constatation, probabilité. </p>
+				<p>L'<b>information</b> est une donnée compréhensible,<br> qui a <u>un sens pour la personne qui la recoit</u>.</p>
+				<p>La <b>connaissance</b> est le résultat d'<u>une réflexion </u>sur les informations analysées.</p>
+				<p>Le <b>savoir</b> permet le <u>discernement final</u> sur le contenu (informations et connaissances) et le <u>jugement de bon sens</u>.</p>
+			</section>
+			<section>
+				<h4>Données-métadonnées</h4>
+				<hr>
+				<p>Les <b>données (primaires)</b> : Quoi?, Quand?, Où?, Combien?...</p>
+				<p class="fragment">Les <b>métadonnées</b> : Qui?, Comment? Pourquoi?...</p>
+				<hr>
+				<blockquote class="fragment">Pas de données sans métadonnées!</bloquote>
+			</section>
+			<section>
+				<h4>Cycle de vie des données</h4>
+				<hr>
+				<img src="images1/cycledevie.png" alt="cycledevie">
+			</section>
+		</section>
+
+		<section>
+			<section id="Don">
+				<h4>2. Données<br>(notions de base)</h4>
+				<hr>
+				<ul>
+				<li class=fragment>Espèces, Individus, Habitats, Ecosystèmes, Menaces, Indicateurs... sont des <b>entités</b> différentes</p>
+				<li class=fragment>Chaque entité a des <b>attributs</b>: par exemple<br>le nom, l'aire de répartition ou le status de protection pour une espèce.</p>
+				</ul>
+			</section>
+			<section>
+				<h4>2. Données<br>(notions de base)</h4>
+				<hr>
+				<ul>
+					<li class=fragment>Il existe des <b>relations entre entités</b> 
+						<ul>
+							<li>telle espèce <u>vit dans</u> tel habitat</li>
+							<li>tel individu <u>appartient à</u> telle espèce</li>
+							<li>telle espèce <u>parasite</u> telle autre espèce</li>
+						</ul>
+					</li>
+					<li class=fragment>Il existe des <b>contraintes sur les attributs</b>
+						<ul>
+							<li>un nom scientifique est exprimé par un binôme latin,<br> il est unique!</li>
+							<li>une latitude est comprise entre -90&deg; et +90&deg;.</li>
+							<li>une longitude est comprise entre -180&deg; et +180&deg;.</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+		</section>
+
+		<section>
+			<section id="Met">
+				<h4>3. Metadonnées</h4>
+				<hr>
+				<p>Metadonnées: <b>données descriptives</b> d'un jeu de données.</p>
+				<ul>
+					<li><b>Qui?</b>: nom, prénom, institution, partenaires</li>
+					<li><b>Comment?</b>: méthodologie, matériel, fréquence, limites...</li>
+					<li><b>Pourquoi?</b>: projet de recherche ou de monitoring,<br>source de financement...</li> 
+				</ul>
+			</section>
+			<section>
+				<h4>3. Metadonnées</h4>
+				<ol>
+					<li>Métadonnées de base</li>
+					<li>Geographiques</li>
+					<li>Temporels</li>
+					<li>Taxonomiques</li>
+					<li>Mots-clés</li>
+					<li>Description du projet</li>
+					<li>Méthode d'échantillonage</li>
+				</ol>
+				<hr>
+			</section>
+		</section>
+
+		<section>
+			<section id="Sql">
+				<h4>4. SQL<br>(base de données relationnelle)</h4>
+				<hr>
+				<img src="images1/database.jpg" alt="database">
+				<blockquote>Organisez vos données suivants vos besoins.</bloquote>
+			</section>
+			<section>
+				<h4>4. SQL<br>(schéma de données)</h4>
+				<hr>
+				<img src="images1/ER.png" alt="ER">
+			</section>
+			<section>
+				<h4>4. SQL<br>(notions de base)</h4>
+				<hr>
+					<table>
+						<tdata><tr><td>Entité</td><td>Table</td></tr></tdata>
+						<tdata><tr><td>Attribut</td><td>Colonne</td></tr></tdata>
+						<tdata><tr><td>Relation</td><td>Clé+index</td></tr></tdata>
+						<tdata><tr><td>Contrainte</td><td>Contrainte</td></tr></tdata>
+					</table>
+			</section>
+			<section>
+				<h4>4. SQL<br>(notions de base)</h4>
+				<hr>
+				<ul>
+					<li class="fragment">SQL=Structured Query Language,<br> en français langage de requête structurée.</li>
+					<li class="fragment">SQL permet de rechercher, d'ajouter, de modifier ou de supprimer des données.</li>
+					<li class="fragment">La base de données <u>vérifie automatiquement</u> toute règle ou contrainte et <u>garantit</u> ainsi <b>l'intégrité de vos données</b>.</li>
+				</ul>
+			</section>
+			<section>
+				<h4>4. SQL<br>(create)</h4>
+					<pre><code data-trim contenteditable>
+create table people ( 
+	peo_id integer primary key, 
+	lab_id integer references labs, 
+	peo_familyName text, 
+	peo_firstName text, 
+	peo_beginDate text, 
+	peo_endDate text); 
+
+create table sites (
+	sit_id integer primary key, 
+	loc_id integer references localities, 
+	sit_name text, 
+	sit_latitude real, 
+	sit_longitude real, 
+	sit_uncertainty integer);
+
+create table species( 
+	spe_id integer primary key, 
+	spe_scientificName text not null unique, 
+	spe_genus text, 
+	spe_species text, 
+	spe_GUID text);
+					</code></pre>
+			</section>
+			<section>
+				<h4>4. SQL<br>(select)</h4>
+				<hr>
+			<p>Les <b>requêtes</b> permettent d’interroger la base de données.</p>
+			<pre><code data-trim contenteditable>
+select * from occurrences where occ_date > '1830-01-01';
+
+select occ.id, occ_latitude, occ_longitude from occurrences 
+where occ_latitude is not null;
+			</code></pre>
+			</section>
+			<section>
+				<h4>4. SQL<br>(join)</h4>
+				<hr>
+			<p>Les <b>jointures</b> permettent d’associer plusieurs tables dans une même requête.</p>
+			<pre><code data-trim contenteditable>
+select * from occurrences occ 
+left join people peo on peo.peo_id = occ.peo_id 
+where (occ.occ_date < peo.peo_beginDate) or 
+(occ.occ_date > peo.peo_endDate);
+			</code></pre>
+			</section>
+			<section>
+				<h4>4. SQL<br>(view)</h4>
+				<hr>
+			<p>Les <b>vues</b> présentent les résultats d'une requête sous forme d'une table virutelle.</p>
+					<pre><code data-trim contenteditable>
+CREATE VIEW observations AS 
+select occ.occ_id AS id, spe.spe_scientificName AS scientificName, spe.spe_GUID AS URL, occ.occ_date AS date, coalesce(occ.occ_latitude,sit.sit_latitude) AS latitude, coalesce(occ.occ_longitude, sit.sit_longitude) AS longitude, 
+coalesce(occ.occ_uncertainty,sit.sit_uncertainty) AS uncertainty, loc.loc_name AS locality, loc.loc_country AS country, peo.peo_firstName || ' ' || peo.peo_familyName AS observer, lab.lab_name AS lab 
+from (((((occurrences occ left join sites sit on((sit.sit_id = occ.sit_id))) 
+left join localities loc on((loc.loc_id = sit.loc_id))) 
+left join species spe on((spe.spe_id = occ.spe_id))) 
+left join people peo on((peo.peo_id = occ.peo_id))) 
+left join labs lab on((lab.lab_id = peo.lab_id)));
+
+select * from observations;
+					</code></pre>
+			</section>
+			<section>
+				<h4>4. SQL<br>(demo)</h4>
+				<hr>
+				<img src="images1/ER.png" alt="ER">
+			</section>
+			<section>
+				<h4>4. SQL<br>(règles d'or)</h4>
+				<blockquote>Gardez vos entités(=tables) simples.<br>Une seule information par colonne.<br>Utilisez des <b>identifants uniques</b> et persistants.<br>Utilisez des noms simples et parlants.<br>Evitez les redondances, source d'erreur.<br>Utilisez des <b>vocabulaires fermés</b><br>(eg code ISO 3166-1-alpha-2 pour pays).</bloquote> 
+			</section>
+		</section>
+
+		<section>
+			<section id="Nos">
+				<h4>5. NoSQL</h4>
+				<hr>
+				<img src="images1/w3_semantic.png" alt="w3_semantic">
+			</section>
+			<section>
+				<h4>5. NoSQL</h4>
+				<p>A côté des base de données relationnelles, ils existent d'autres solutions pour organiser/interroger vos données:</p>
+				<ul>
+					<li>Clés-valeurs</li>
+					<li>Triplets, RDF</li>
+					<li>Graph database</li>
+					<li>Base de données orientées objets</li>
+					<li>...</li>
+				</ul>
+			</section>
+		</section>
+
+		<section>
+			<section id="Out">
+				<h4>6. Outils</h4>
+				<hr>
+				<img src="images1/swissknife.jpg" alt="swissknife">
+				<blockquote>Être à l'aise avec vos outils va grandement vous simplifier la vie.</bloquote>
+			</section>
+			<section data-markdown>
+				<script type="text/template">
+					### 6. Outils (recommandés)
+					
+					* Editeur de texte (pour vos données et vos scripts)
+					* Tableur: [LibreOffice](https://fr.libreoffice.org/),[OpenRefine](http://openrefine.org/)
+					* Base de données: [SQLite](https://www.sqlite.org/), [PostgreSQL](http://postgresql.org/)
+					* Cartographie: [QGIS](http://www.qgis.org/)
+					* (Language: Java, Python, Ruby...)
+				</script>
+			</section>
+			<section>
+				<h4>6. Outils(Démo)</h4>
+				<hr>
+				<img src="images1/demotools.png" alt="demotools">
+			</section>
+			<section>
+				<h4>6. Outils</h4>
+				<hr>
+					<img src="images1/Rlogo.jpg" alt="R">
+					<img src="images1/Logo_qgis.png" alt="QGIS">
+					<img src="images1/LibreOffice_logo.png" alt="LibreOffice">
+					<img src="images1/logo-openrefine.png" alt="OpenRefine">
+					<img src="images1/sqlite-logo.png" alt="SQLite">
+					<img src="images1/postgreSQL.png" alt="Postgres">
+			</section>
+		</section>
+
+		<section>
+			<section id="Sta">
+				<h4>7. Standards <br>(d'échanges de données)</h4>
+				<ul>
+					<li class="fragment"><b>JSON</b> est un format texte léger; facile à lire ou à écrire pour des humains et aisément analysable ou générable par des machines.</li>
+					<li class="fragment"><b>CSV</b>(ou TSV) format texte de données tabulaires. Chaque ligne du texte correspond à une ligne du tableau et les virgules(ou tab) correspondent aux séparations entre les colonnes.</li>
+					<li class="fragment">Darwin Core (<b>DwC</b>) est un ensemble de standards pour le partage des données de biodiversité. Il a été développé par le groupe international TDWG.</li>
+				</ul>
+			</section>
+		</section>
+
+		<section>
+			<h2>Des questions?</h2>
+			<p><a href="http://www.biodiversity.be">Belgian Biodiversity Platform</a></p>
+			<p><a href="mailto:a.heughebaert@biodiversity.be">a.heughebaert@biodiversity.be</a></p>
+			<img src="images1/GBIF_logo_130pix.jpg" alt="GBIF">
+			<img src="images1/BBPF logo.png" alt="BBPF">
+			<p><small>Fait avec <a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a> - HTML Presentations made easy</small></p>
+		</section>
+
+	</div>
+
+</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

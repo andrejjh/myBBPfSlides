@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Publication au GBIF</title>
+
+		<meta name="description" content="Publication de données de Biodiversité au GBIF">
+		<meta name="author" content="André Heughebaert">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h3>Publication de données<br>de Biodiversité au GBIF</h3>
+					<hr>
+			<p>Atelier CEBioS MRV, Septembre 2015<br><hr><br><small>André Heughebaert <br> <a href="http://www.biodiversity.be">Belgian Biodiversity Platform</a></small></p>
+				</section>
+
+				<section>
+					<h2>Contenu</h2>
+					<hr>
+					<ol>
+						<li><a href="#/Principes">Les Principes du GBIF</a></li>
+						<li><a href="#/Pourquoi">Pourquoi publier ses données?</a></li>
+						<li><a href="#/Qui">Rôles des intervenants</a></li>
+						<li><a href="#/IPR">Propriété intellectuelle</a></li>
+						<li><a href="#/Quoi">Que peut-on publier?</a></li>
+						<li><a href="#/Sensibles">Les données sensibles</a></li>
+						<li><a href="#/Préparer">Préparer la publication</a></li>
+						<li><a href="#/Comment">Comment publier?</a></li>
+						<li><a href="#/Accèder">Accès aux données</a></li>
+						<li><a href="#/Utiliser">Utilisations</a></li>
+					</ol>
+
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section id="Principes">
+						<h2>1. Principes du GBIF</h2>
+						<hr>
+						<ul>
+							<li>Rendre accessible l'ensemble des données <u>primaires</u></li>
+							<li>L'accès est rapide, <u>libre et gratuit</u></li>
+							<li>L'éditeur de données <u>décide lui-même</u> de ce qu'il publie et des éventuelles restrictions d'utilisation.</li>
+							<li>Les <u>droits de propriété intellectuelle</u> ne sont en rien modifiés par la publication au GBIF.</li>
+							<li>L'éditeur est seul garant de la <u>qualité</u> et de la <u>pérénnité</u> des données.</li>
+						</ul>
+						<p><small>voir <a href="http://www.gbif.org/resources/2765">GBIF and Open Access</a></small></p>
+					</section>
+					<section>
+						<h4>1. Principes du GBIF</h4>
+						<h3>Engagements des différents acteurs</h3>
+						<hr>
+						<ul>
+							<li>Les pays signataires du <a href="http://www.gbif.org/resources/2605">Protocol d'accord</a>(MoU) s'engagent à mettre en oeuvre un <u>noeud national</u> afin de développer le réseau dans le pays en y <u>approuvant</u> des institutions désireuses de publier des données.</li>
+						<li>Les <u>éditeurs</u> signent un <a href="http://www.gbif.org/resources/2910">accord de partage</a>.</li>
+						<li>Les <u>utilisateurs</u> signent un <a href="http://www.gbif.org/resources/2909">accord d'utilisation</a>.</li>
+					</ul>
+					</section>
+					<section>
+						<h4>1. Principes du GBIF</h4>
+						<h3><a href="http://www.gbif.org/resources/2910">Accord de partage</a></h3>
+						<hr>
+						<ol><small>
+							<li>Biodiversity data accessible via the GBIF network are <u>openly and universally available to all users</u> within the framework of the GBIF Data Use Agreement and with the terms and conditions that the Data Publisher has identified in its metadata.</li>
+							<li>GBIF does not <u>assert any intellectual property rights</u> in the data that is made available through its network.</li>
+							<li>The Data Publisher warrants that they have made <u>the necessary agreements with the original owners</u> of the data that it can make the data available through GBIF network.</li>
+							<li>The Data Publisher makes reasonable efforts to ensure that the data they serve <u>are accurate</u>.</li>
+							<li><u>Responsibility</u> regarding the restriction of access to sensitive data resides with the Data Publisher.</li>
+							<li>The Data Publisher <u>includes stable and unique identifiers</u> in their data so that the owner of the data is known and for other necessary purposes.</li>
+							<li>GBIF Secretariat may cache a copy and serve full or partial data further to other users together with the terms and conditions for use set by the Data Publisher. Queries of such data through the GBIF Secretariat are reported to the Data Publisher.</li>
+							<li>Data Publishers <u>are endorsed by a GBIF Participant</u>, if applicable, before their metadata is made available by the GBIF Secretariat.</li>
+							<li>GBIF Secretariat is not liable or responsible, nor are its employees or contractors, for the data contents or their use; or for any loss, damage, claim, cost or expense however it may arise, from an inability to use the GBIF network.</li>
+						</small></ol>
+					</section>
+					<section>
+						<h4>1. Principes du GBIF</h4>
+						<h3><a href="http://www.gbif.org/resources/2909">Accord d'utilisation</a></h3>
+						<hr>
+						<ol><small>
+							<li>The quality and completeness of data <u>cannot be guaranteed</u>. Users employ these data at their own risk.</li>
+							<li>Users shall <u>respect restrictions</u> of access to sensitive data.</li>
+							<li>In order to make attribution of use for owners of the data possible, the identifier of <u>ownership of data must be retained</u> with every data record.</li>
+							<li>Users <u>must publicly acknowledge</u>, in conjunction with the use of the data, the Data Publishers whose biodiversity data they have used. Data Publishers may require additional attribution of specific collections within their institution.</li>
+							<li>Users <u>must comply with additional terms and conditions of use</u> set by the Data Publisher. Where these exist they will be available through the metadata associated with the data.</li>
+						</small></ol>
+					</section>
+					<section>
+						<h4>1. Principes du GBIF</h4>
+						<h3>Evolution prochaine</h3>
+						<hr>
+						<ul>
+							<li>La situation actuelle est <u>assez complexe et difficile</u> à appliquer.</li>
+							<li>Les éditeurs seront amenés à choisir une license de type <a href="http://creativecommons.org">Creative Commons</a>.</li>
+							<li>Le Secrétariat prépare, avec la communauté, un <u>code de conduite</u> pour les éditeurs et les utilisateurs.</li>
+							<li>Un mécanisme de citation via le système <a href="http://www.doi.org/">Digital Object Identifier</a>(DOI) est à l'étude.</li>
+						</ul>
+						<p><small>voir <a href="http://www.gbif.org/newsroom/consultations">Consultations sur les Licenses et d'adoption des éditeurs</a></small></p>
+					</section>
+				</section>
+
+				<section>
+					<section id="Pourquoi">
+						<h2>2. Pourquoi publier ses données?</h2>
+						<img height="525" src="images2/GBIF-all.png" alt="???">
+					</section>
+
+					<section>
+						<h4>2. Pourquoi publier ses données?</h4>
+						<hr>
+						<ul>
+							<li><u>Inventorier</u> la Biodiversité du pays</li>
+							<li><u>Comprendre</u> son évolution et enrayer son déclin</li>
+							<li><u>Décider</u> sur base de connaissances scientifiques</li>
+							<li>Renforcer <u>la crédibilité</u> des travaux/publications et augmenter <u>la renommée</u> des Auteurs et de leurs Institutions</li>
+							<li>S'offrir de nouvelles opportunités de collaboration</li>
+							<li><u>Permettre à de nouvelles recherches</u> d'utiliser gratuitement les données publiques déjà receuillies</li>
+							<li><u>Rapatrier les connaissances</u> dans leur pays d'origine</li>
+							<li><u>Etre citer</u> par la publication d'un <a href="http://www.gbif.org/publishingdata/datapapers">data paper</a></li>
+						</ul>
+					</section>
+
+					<section data-transition="none">
+						<h4>2. Pourquoi publier ses données?</h4>
+						<img height="525" src="images2/GBIF-pre2000.png" alt="???">
+						<p><small>Données historiques XIX-XX<br> 173 millions d'occurrences, 25% de specimens</small></p>
+					</section>
+
+					<section data-transition="none">
+						<h4>2. Pourquoi publier ses données?</h4>
+						<img height="525" src="images2/GBIF-post2000.png" alt="???">
+						<p><small>Données récentes XXI<br> 207 millions d'occurrences, &lt; 4% de specimens</small></p>
+					</section>
+
+				</section>
+
+				<section>
+					<section id="Qui">
+						<h2>3.Rôles des intervenants</h2>
+						<hr>
+						<img height="500" src="images2/GBIF Network.png" alt="???">
+					</section>
+					<section>
+						<h4>3.Rôles des intervenants</h4>
+						<hr>
+						<ul>
+							<li>Dans l'<u>Institution</u>:<ul>
+								<li>Auteur(s) des données</li>
+								<li>(Contact Technique)</li>
+								<li>(Contact Administratif)</li>
+							</ul></li>
+							<li>Au <u>Noeud national</u>:<ul>
+								<li>Gestionnaire du Noeud</li>
+								<li>Technicien(s)</li>
+							</ul></li>
+							<li>Au <u>Secrétariat:</u><ul>
+								<li>Développeurs</li>
+								<li>Support</li>
+							</ul></li></li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section id="IPR">
+						<h2>4.Propriété intellectuelle</h2>
+						<hr>
+						<ul>Le GBIF encourage la libre diffusion des données sur la biodiversité et, plus particulièrement :
+							<li>ne revendique <u>aucun droit de propriété</u> sur le contenu des bases de données constituées par d’autres organismes et subséquemment affiliées au GBIF;</li>
+							<li>cherche dans toute la mesure du possible à rendre <u>librement et facilement accessibles</u>, avec un minimum de restrictions à leur réutilisation, toutes les données commandées, créées ou constituées directement par le GBIF;</li>
+							<li>respecte les <u>conditions fixées par les éditeurs</u> de données qui décident d’affilier leurs bases de données au GBIF</li>
+						</ul>
+					</section>
+
+					<section>
+						<h4>4.Propriété intellectuelle</h4>
+						<h6>Mention de la source</h6>
+						<hr>
+						<ul>
+							<li>Le GBIF doit s’assurer que l’éditeur/détenteur des données est <u>bel et bien mentionné</u> et que les mentions de source sont maintenues lors des utilisations ultérieures des données.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h4>4.Propriété intellectuelle</h4>
+						<h6>Droits de propriété intellectuelle sur les outils applicables à la biodiversité</h6>
+						<hr>
+							<ul>
+							<li>Le GBIF peut revendiquer les droits de propriété intellectuelle appropriés existants des instances nationales concernées sur tous les outils, comme des moteurs de recherche ou d’autres produits logiciels, conçus par le GBIF dans l’exécution de son programme de travail.</li>
+						</ul>
+					</section>
+					<section>
+						<h4>4.Propriété intellectuelle</h4>
+						<h6>Transfert de technologies</h6>
+						<hr>
+						<ul>
+							<li>Les participants reconnaissent que, sous réserve des droits de propriété intellectuelle pertinents, le GBIF doit s’efforcer de <u>promouvoir le transfert</u> non exclusif, selon des modalités mutuellement convenues et à des établissements de recherche, surtout dans les pays en développement, <u>des technologies informatiques qui sont disponibles</u>, en particulier en ce qui concerne <u>les programmes de formation</u> et de <u>renforcement des capacités</u>.</li>
+						</ul>
+					<p><small>voir <a href="http://www.gbif.org/resources/2605">Protocol d'accord &para; 8</a></small></p>
+						</section>
+				</section>
+
+				<section>
+					<section id="Quoi">
+						<h2>5.Que peut-on publier?</h2>
+						<hr>
+						<ul>
+							<li>Des <u>occurrences</u>:<ul>
+								<li>specimens de Collection</li>
+								<li>observations</li>
+							</ul></li>
+							<li>Des listes d'espèces (=<u>checklists</u>)</li>
+							<li>Des <u>meta-données</u> seules<BR>
+								(eg si les données sont pas numérisées)</li>
+						</ul>
+						<p><small>voir <a href="http://www.gbif.org/publishingdata/summary"> comment publier au GBIF?</a></small></p>
+
+					</section>
+					<section>
+						<h4>5.Que peut-on publier?</h4>
+						<hr>
+						<ul>
+							<li>des descriptions d'espèces</li>
+							<li>des mesures</li>
+							<li>des échantillons</li>
+							<li>des documents multimédia</li>
+							<li>des séquences ADN</li>
+							<li>des liens vers d'autres sites</li>
+						</ul>
+						<p><small>voir <a href="http://tools.gbif.org/dwca-validator/extensions.do">les extensions au DarwinCore</a></small></p>
+					</section>
+				</section>
+
+				<section>
+					<section id="Sensibles">
+						<h2>6.Les données sensibles</h2>
+						<hr>
+						<blockquote>
+							&ldquo;Qu'est-ce qu'une donnée sensible?&rdquo;
+						</blockquote>
+						<ul>Toute donnée dont la publication est problématique:
+							<li>Pour l'<u>espèce</u> en question (eg braconnage)</li>
+							<li>Pour l'<u>observateur</u> ou le collectionneur(eg législation)</li>
+							<li>Pour l'<u>auteur ou son institution</u><br>(eg embargo sur résultats non publiés)</li>
+						</ul>
+					</section>
+					<section>
+						<h4>6.Les données sensibles</h4>
+						<hr>
+<blockquote>
+	&ldquo;Que faire des données sensibles?&rdquo;
+</blockquote>
+						<p></p>
+						<ul>
+							<li>Ne pas les publier (<u>métadonnées seulement</u>)</li>
+							<li>Ne les publier que <u>partiellement</u> (les données non problématiques)</li>
+							<li>Omission ou <u>floutage</u> des coordonnées(eg grille 10x10km)</li>
+							<li>Identifier le <u>genre</u> plutôt que l'espèce</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section id="Préparer">
+						<h4>7.Préparer la publication</h4>
+						<hr>
+						<img src="images2/HOLOTYPUS - Eulophia coutreziana Geerinck.jpg" alt="???" height="400">
+						<p><small><i>Eulophia coutreziana</i>, BRLU-Holotype</small></p>
+						<p><a href="http://herbarium.ulb.ac.be/"><img src="images2/ULB_BRLU.gif" alt="BRLU"></a></p>
+					</section>
+					<section>
+						<h4>7.Préparer la publication</h4>
+						<hr>
+<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+région, localité, coordonnées, latitude, longitude, incertitude
+Aggui,Adrar,"21°10’N, 13°07’W",21.166666666666668,-13.116666666666667,1500
+Amogjar pass,Adrar,"20°32’N, 12°48’W",20.533333333333335,-12.8,1500
+Atar,Adrar,"20°31’N, 13°03’W",20.516666666666666,-13.05,1500
+Ain Savra,Adrar,"19°32.416’N, 12°06.829’W",19.540266666666668,-12.113816666666667,100
+Azougui,Adrar,"20°30’N, 13°10’W",20.5,-13.166666666666666,1500
+</code></pre>
+<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+{"usageKey":2440447,"scientificName":"Tursiops truncatus (Montagu, 1821)",
+"canonicalName":"Tursiops truncatus","rank":"SPECIES","synonym":false,
+"confidence":100,"matchType":"EXACT","kingdom":"Animalia","phylum":"Chordata",
+"order":"Cetacea","family":"Delphinidae","genus":"Tursiops","species":"Tursiops truncatus",
+"kingdomKey":1,"phylumKey":44,"classKey":359,"orderKey":733,"familyKey":5314,
+"genusKey":2440446,"speciesKey":2440447,"class":"Mammalia"}
+</code></pre>
+<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document><Folder><name>LRMgazetteer</name>
+<Schema name="LRMgazetteer" id="LRMgazetteer">
+<SimpleField name="Name" type="string"></SimpleField>
+<SimpleField name="Description" type="string"></SimpleField>
+...
+</Schema>
+<Placemark>
+<name>Amogjar pass</name>
+<description>Adrar</description>
+...
+</Placemark>
+</code></pre>
+	</section>
+					<section>
+						<h4>7.Préparer la publication</h4>
+						<h2>Pré-requis</h2>
+						<hr>
+						<ol>Les données à publier doivent être:
+							<li>sous forme <u>électronique</u> et dans un format exploitable</li>
+							<li>structurées et <u>compréhensibles par une machine</u><br>(eg CSV, JSON, SQL, XML)</li>
+							<li><u>expliquées &amp; documentées</u></li>
+							<li>nettoyées &amp; validées</li>
+							<li>pré-filtrées (ou filtrables) pour la publication</li>
+							<li><u>identifiables</u> de manière unique et durable</li>
+						</ol>
+						<blockquote>
+							&ldquo;C'est la partie la plus laborieuse du processus de publication!&rdquo;
+						</blockquote>
+					</section>
+					<section>
+						<h4>7.Préparer la publication</h4>
+						<h2>Occurrence_IDs</h2>
+						<hr>
+						<ol>Les bonnes pratiques à suivre:
+							<li>Ils doivent être <u>uniques dans le jeu de données</u></li>
+							<li>Ils doivent être <u>stables dans le temps</u></li>
+							<li>Ils devraient être uniques globalement<br>(eg 'urn:MRBIF:ENS:HNM:040661')</li>
+						</ol>
+						<p><small>voir <a href="http://gbif.blogspot.dk/2014/04/ipt-v21.html"> IPT v2.1- Promoting the use of stable occurrenceIDs</a></small></p>
+					</section>
+					<section>
+						<h4>7.Préparer la publication</h4>
+						<h2>Les outils recommandés</h2>
+						<hr>
+						<ul>
+							<li>un bon éditeur de texte
+								(eg <a href="https://atom.io/">Atom</a>, <a href="http://www.gnu.org/software/emacs/">Emacs</a>,
+								<a href="http://www.jedit.org/">jEdit</a>, <a href="http://www.vim.org/">Vim</a>)</li>
+							<li><a href="http://www.qgis.org/fr/site/">QuantumGIS</a></li>
+							<li><a href="http://www.sqlite.org/">SQLite</a></li>
+							<li><a href="https://fr.libreoffice.org/">LibreOffice</a></li>
+							<li><a href="http://openrefine.org/">OpenRefine</a></li>
+							<li>les <a href="http://www.gbif.org/developer/summary">webservices</a> du GBIF</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section id="Comment">
+						<h2>8.Comment publier?</h2>
+						<hr>
+						<img  height="500" src="images2/GBIF_Publishing.png" alt="???">
+					</section>
+					<section>
+						<h4>8.Comment publier?</h4>
+						<h2>Outils recommandés</h2>
+						<hr>
+						<ul>
+							<li>Outils développés par GBIF:
+								<ul>
+									<li><a href="http://www.gbif.org/ipt">IPT</a><small>(Integrated Publishing Toolkit)</small></li>
+									<li><small>DarwinCore Assistant (2011)</small></li>
+									<li><small>Spreadsheet Processor (2011)</small></li>
+								</ul>
+							</li>
+							<li>Les autres outils:
+								<ul>
+									<li><a href="http://www.biocase.org/">BioCASe</a></li>
+									<li><small>Tapir (2010)</small></li>
+									<li><small>Digir (2004)</small></li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h4>8.Comment publier?</h4>
+						<h2>IPT</h2>
+						<hr>
+						<blockquote>
+							&ldquo;Démonstration de publication des données avec l'Integrated Publication Toolkit&rdquo;
+						</blockquote>
+						<p><small>voir <a href="https://code.google.com/p/gbif-providertoolkit/wiki/IPT2ManualNotes"> IPT v2.1- Manuel d'utilisateur</a></small></p>
+					</section>
+					<section>
+						<h4>8.Comment publier?</h4>
+						<h2>Les Métadonnées</h2>
+						<hr>
+						<ul>
+							<li><a href="https://code.google.com/p/gbif-providertoolkit/wiki/IPT2ManualNotes#Basic_Metadata">Base</a>: Titre, Description, Type, Langue, Contact</li>
+							<li><a href="https://code.google.com/p/gbif-providertoolkit/wiki/IPT2ManualNotes#Geographic_Coverage">Géo</a>: Coordonnées, Description</li>
+							<li><a href="https://code.google.com/p/gbif-providertoolkit/wiki/IPT2ManualNotes#Taxonomic_Coverage">Taxo</a>: Nom scientifique, Rang, Description</li>
+							<li><a href="https://code.google.com/p/gbif-providertoolkit/wiki/IPT2ManualNotes#Temporal_Coverage">Tempo</a>: Dates, Type</li>
+							<li><a href="https://code.google.com/p/gbif-providertoolkit/wiki/IPT2ManualNotes#Keywords">Mots-Clés</a></li>
+							<li><a href="https://code.google.com/p/gbif-providertoolkit/wiki/IPT2ManualNotes#Project_Data">Projet</a></li>
+							<li>...</li>
+						</ul>
+					</section>
+					<section>
+						<h4>8.Comment publier?</h4>
+						<h2>Les Données</h2>
+						<hr>
+						<ul>
+							<li>Type: <u>Occurrences</u>, <u>liste d'espèces</u> ou <u>metadonnées</u> seules</li>
+							<li>Conversion (quasi-automatique) en <a href="https://code.google.com/p/gbif-providertoolkit/wiki/IPT2ManualNotes#Darwin_Core_Mappings">DarwinCore</a></li>
+						</ul>
+						<img  src="images2/dwca.png" alt="DarwinCore Star Schema">
+					</section>
+				</section>
+
+				<section>
+					<section id="Accèder">
+						<h2>9.Accès aux données</h2>
+						<hr>
+						<img  height="400" src="images2/GBIF_org.png" alt="???">
+						<ol>Pré-requis:
+							<li>Créer un compte sur <a href="http://www.gbif.org">www.gbif.org</a></li>
+							<li>Accepter l'accord d'utilisation</li>
+						</ol>
+					</section>
+
+					<section>
+						<h4>9.Accès aux données</h4>
+						<h2>Rechercher des données</h2>
+						<hr>
+						<img  height="400" src="images2/GBIF_Search.png" alt="???">
+						<p>Exemple: 25.694 occurrences pour la Mauritanie</p>
+					</section>
+
+					<section>
+						<h4>9.Accès aux données</h4>
+						<h2>Télécharger des données</h2>
+						<hr>
+						<img  height="400" src="images2/GBIF_Download.png" alt="???">
+					</section>
+
+					<section>
+						<h4>9.Accès aux données</h4>
+						<h2>Revoir ses téléchargements</h2>
+						<hr>
+						<img  height="400" src="images2/GBIF_YourDownloads.png" alt="???">
+					</section>
+
+					<section>
+						<h4>9.Accès aux données</h4>
+						<hr>
+						<img  height="400" src="images2/DownloadFolder.png" alt="???">
+						<ul>
+							<li><b>Citations.txt</b>: Comment citer les sources des données?</li>
+							<li><b>Occurrence.txt</b>: Données indexées par GBIF</li>
+							<li><b>Rights.txt</b>: Eventuelles restrictions d'utilisation</li>
+							<li><b>Verbatim.txt</b>: Données telles que publiées par l'éditeur</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section id="Utiliser">
+						<h2>10.Utilisations</h2>
+						<hr>
+						<ul>Recherche basée sur des données extraites du GBIF:
+							<li>Quelques exemples sur le <a href="http://www.gbif.org/newsroom/uses">portail du GBIF</a></li>
+							<li>Les articles scientifiques via <a href="http://www.mendeley.com/groups/1068301/gbif-public-library/">Mendeley GBIF Public Library</a><br>(eg <a href="http://www.gbif.org/country/BE/publications">publications d'auteurs belges</a>)</li>
+						</ul>
+					</section>
+					<section>
+						<h2>10.Utilisations</h2>
+						<hr>
+						<ul>La publication des données offre de nouvelles perspectives.
+							<li>Au niveau <b>national</b>, <br>
+								elle décloisonne les chercheurs et les disciplines, les départements et les institutions.</li>
+							<li>Au niveau <b>international</b>, <br>
+								elle permet de mieux gérer certaines problèmatiques (eg espèces migratrices, espèces invasives et zones frontalières).</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<h2>Merci pour votre participation</h2>
+					<p>André Heughebaert, <a href="http://www.biodiversity.be">Noeud Belge du GBIF</a></p>
+					<p><a href="mailto:a.heughebaert@biodiversity.be">a.heughebaert@biodiversity.be</a></p>
+					<img src="images2/GBIF_logo_130pix.jpg" alt="GBIF">
+					<img src="images2/BBPF logo.png" alt="BBPF">
+					<p><small>Fait avec <a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a> - HTML Presentations made easy</small></p>
+				</section>
+
+			</div>
+
+		</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: 'plugin/zoom-js/zoom.js', async: true },
+				{ src: 'plugin/notes/notes.js', async: true }
+			]
+		});
+
+	</script>
+	</body>
+
+</html>

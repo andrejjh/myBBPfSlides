@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Taxon services</title>
+
+		<meta name="description" content="Taxon services">
+		<meta name="author" content="André Heughebaert">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+<div class="reveal">
+<!-- Any section element inside of this container is displayed as a slide -->
+	<div class="slides">
+		<section>
+			<h3>Taxon Services</h3>
+			<hr>
+			<p>Data cleaning/publishing Workshop<br> 9th November 2015<hr><br><small>André Heughebaert <br> <a href="http://www.biodiversity.be">Belgian Biodiversity Platform</a></small></p>
+				<img src="images6/ebr_logo.png" height="200" alt="EBR">
+				<img src="images6/Linnaeus.jpg" height="200" alt="CoL">
+		</section>
+
+		<section>
+			<h2>Summary</h2>
+			<hr>
+			<ol>
+				<li><a href="#/Sci">Scientific names</a></li>
+				<li><a href="#/Nom">Nomenclature(s)</a></li>
+				<li><a href="#/Tax">Taxonomy</a></li>
+				<li><a href="#/Web">Web pages</a></li>
+				<li><a href="#/API">Web services</a></li>
+				<li><a href="#/Demo">Demo</a></li>
+				<li><a href="#/Hands">Hands-on</a></li>
+			</ol>
+		</section>
+
+		<section>
+			<section id="Sci">
+				<h4>Scientific names</h4>
+				<hr>
+				<p>Binomial names in latin : <b>genus species</b> author, year</p>
+				<blockquote>Homo sapiens Linnaeus, 1758</blockquote>
+			</section>
+			<section>
+				<h4>Scientific names</h4>
+				<hr>
+				<p>Scientists believe that Earth is home<br> to about <b>8.7 million</b> different forms of life,<br> and of those <br>only about <b>1.8 million</b> have been identified. <p>
+				<img src="images6/OToL.png" alt="OpenTreeOfLife">
+			</section>
+			<section>
+				<h4>Scientific names</h4>
+<pre><code  data-trim contenteditable>
+Acaridae Ewing & Nesbitt, 1942
+Acarus nidicolus Griffiths, 1970
+Accipiter cirrocephalus subsp. cirrocephalus
+Accipiter madagascariensis J. Verreaux, 1833
+Acmaea pustulata Helbling, 1779
+Acmaeodera (Acmaeodera) revelierei Mulsant & Rey, 1859
+Acmaeoderella (Carininota) flavofasciata (Piller & Mitterpacher, 1783)
+Acmaeoderella (Carininota) flavofasciata placida (Baudi, 1870)
+</code></pre>
+<blockquote>Well formated names?<br>Existing names?<br>Accepted names?</blockquote>
+				
+				<hr>
+			</section>
+		</section>
+
+		<section id="Nom">
+			<section>
+				<h4>Nomenclature(s)</h4>
+				<hr>
+				<ul>
+				<li><b>ICZN</b> (18 chapters, 90 articles, 150+ pages) -<br>
+					International Commission on <b>Zoological</b> Nomenclature</li>
+				<li class=fragment><b>ICBN</b> - International Code of <b>Botanical</b> Nomenclature</li>
+				<li class=fragment><b>ICN</b> - International Code of Nomenclature for <b>algae, fungi, and plants</b></li>
+				<li class=fragment><b>ICNCP</b> - International Code of Nomenclature for <b>Cultivated Plants</b></li>
+				<li class=fragment><b>ICNB</b> - International Code of Nomenclature of <b>Bacteria</b></li>
+				<li class=fragment>...</li>		
+				</ul>
+			</section>
+			<section>
+				<h4>All sort of names</h4>
+				<hr>
+				<ul>
+					<li><b>valid</b> (Animalia, Protozoa, Bacteria, and Archaea)<br> or <b>accepted</b> (Plantae, Chromista, and Fungi)</li>
+					<li><b>invalid</b> (Animalia, Protozoa, Bacteria, and Archaea):<br>
+							<small>homonym & junior synonymjunior homonym, junior synonym, misapplied, nomen dubium, nomen oblitum, original name/combination...</small></li>
+					<li>or <b>not accepted</b> (Plantae, Chromista, and Fungi):<br>
+								<small>database artifact, homonym (illegitimate), horticultural, invalidly published, nomen nudum, invalidly published, other, misapplied, orthographic variant (misspelling)...</small></li>
+				</ul>
+			</section>
+		</section>
+
+		<section>
+			<section id="Tax">
+				<h4>Taxonomy <a href="http://www.catalogueoflife.org">CoL</a></h4>
+				<hr>
+				<img src="images6/logoCoL.png" alt="CoL">
+				<p>Catalog of Life consists of a <b>single integrated species checklist</b> and <b>taxonomic hierarchy</b>.<br>
+					The Catalogue holds essential information on the names, relationships and distributions of over <b>1.6 million species</b>.<br>
+					It integrates data from more than <b>150 species databases</b>.</p>
+			</section>
+			<section>
+				<h4>Taxonomy <a href="http://www.gbif.org/dataset/d7dddbf4-2cf0-4f39-9b2a-bb099caae36c">GBIF</a></h4>
+				<hr>
+				<img src="images6/GBIF-2015.png" alt="GBIF">
+				<p>GBIF Backbone holds 2.5 million Species and 4.4 million Taxa.</p>
+			</section>
+			<section>
+				<h4>Taxonomy <a href="http://www.eu-nomen.eu/portal/">PESI</a></h4>
+				<hr>
+				<img src="images6/PESI.png" alt="PESI">
+				<p>PESI Pan-European Species directories Infrastructure (aka EU-NOMEN) holds <br>300.000+ Species and 450.000+ Taxa <br>and 190.800 vernaculars names in 117 languages.</p>
+				<hr>
+				<p class=fragment>...and much more taxonomical databases related to<br> projects, regions, countries, habitats, taxonomical groups...</p>
+			</section>
+		</section>
+
+		<section>
+			<section id="Web">
+				<h4>Webpages for humans</h4>
+				<hr>
+				<img src="images6/web4human.png" alt="web4human">
+				<blockquote>Human readable responses(HTML) to human (click) requests.</bloquote>
+			</section>
+			<section>
+				<h4>Webpages for humans</h4>
+				<hr>
+				<img src="images6/Milvus_milvus.png" alt="Milvus milvus">
+			</section>
+		</section>
+
+		<section>
+			<section id="API">
+				<h4>Webservices for machines</h4>
+				<hr>
+				<img src="images6/web4machine.png" alt="web4machine">
+				<blockquote>Machine readable responses(JSON/XML) to machine requests.</bloquote>
+			</section>
+			<section>
+				<h4>Webservices for machines</h4>
+				<hr>
+<p>HTTP Request:</p>
+<pre><code  data-trim contenteditable>
+http://api.gbif.org/v1/species/match?name=milvus%20milvus
+</code></pre>
+<p>HTTP Response:</p>	
+<pre><code  data-trim contenteditable>
+{"usageKey":5229168,"scientificName":"Milvus milvus (Linnaeus, 1758)",
+"canonicalName":"Milvus milvus", "rank":"SPECIES","status":"ACCEPTED",
+"confidence":100,"matchType":"EXACT","kingdom":"Animalia","phylum":"Chordata",
+"order":"Accipitriformes","family":"Accipitridae","genus":"Milvus","species":"Milvus milvus",
+"kingdomKey":1,"phylumKey":44,"classKey":212,"orderKey":7191147,"familyKey":2877,"genusKey":5229166,"speciesKey":5229168,
+"synonym":false,"class":"Aves"}
+</code></pre>
+			</section>
+			<section>
+				<h4>Invoking webservices</h4>
+				<hr>
+<pre><code  data-trim contenteditable>
+require 'rubygems'
+require 'net/http'
+require 'CSV'
+require 'JSON'
+require 'pp'
+
+def check_data(inpath, outpath)
+  tags= ["scientificName", "type","genusOrAbove", "specificEpithet", "authorsParsed","canonicalName", "canonicalNameComplete"]
+  CSV.open(outpath, "wb", :headers => true, :col_sep =>";") do |out|
+    # :headers option indicates the file has a header row
+    out << tags
+    CSV.foreach(inpath, :headers => true, :col_sep => ";") do |row|
+      name=row['scientificname']
+      name=name.gsub(/[ïí]/, 'i')
+      name=name.gsub(/[éèë]/, 'e')
+      name=name.gsub('ö', 'o')
+      name=name.gsub('ü', 'u')
+      name=name.gsub(/[áä]/, 'a')
+      pp name
+      url = URI.parse('http://api.gbif.org/v1/parser/name?name='+name.gsub(' ','%20'))
+      res = Net::HTTP.get_response(url)
+      resp= JSON.parse(res.body)
+#      pp resp
+      outrow = Array.new
+      tags.each {|t| outrow << resp[0][t] }
+      out << outrow
+    end
+  end
+end
+
+check_data(ARGV[0],ARGV[1])	
+</code></pre>
+			</section>
+
+		</section>
+
+		<section id="Demo">
+				<h2>Demo</h2>
+				<hr>
+				<ol>
+					<li><u>Name Parsing</u>
+					<ul>
+						<li>GBIF</li>
+					</ul></li>
+					<li><u>Name Search</u>
+					<ul>
+						<li>GBIF</li>
+						<li>Catalogue of Life</li>
+						<li>PESI</li>
+					</ul></li>
+				</ol>
+				<p>Using both <b>browser</b>(webpage) and <b>API</b>(webservices).</p>
+		</section>
+
+		<section id="Hands">
+			<section>
+				<h2>Hands-on</h2>
+				<hr>
+				<h4>Tools you need</h4>
+				<ul>
+					<li>any <b>web browser</b></li>
+					<li>any <b>text editor</b></li>
+					<li>your <b>programing language</b>: Python, Ruby, R, Java...</li>
+					<li>(or <b>REST client</b>)</li>					
+				</ul>
+			</section>
+		</section>
+
+		<section id="Ref" data-markdown>
+## References
+* [ECAT Name parser](http://tools.gbif.org/nameparser/)
+* [GBIF Species search](http://www.gbif.org/species)
+* [CoL](http://catalogueoflife.org/)
+* [PESI](http://www.eu-nomen.eu/pesi/)
+* [Taxamatch](https://wiki.csiro.au/display/taxamatch/Home)
+		</section>
+
+		<section>
+			<h2>Questions?</h2>
+			<p><a href="http://www.biodiversity.be">Belgian Biodiversity Platform</a></p>
+			<p><a href="mailto:a.heughebaert@biodiversity.be">a.heughebaert@biodiversity.be</a></p>
+			<img src="images6/BBPFlogo.png" alt="BBPF">
+			<p><small>Made with <a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a> - HTML Presentations made easy</small></p>
+		</section>
+
+	</div>
+
+</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

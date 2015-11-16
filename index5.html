@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Quantum GIS</title>
+
+		<meta name="description" content="QGIS">
+		<meta name="author" content="André Heughebaert">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+<div class="reveal">
+<!-- Any section element inside of this container is displayed as a slide -->
+	<div class="slides">
+		<section>
+			<h3>Quantum GIS</h3>
+			<hr>
+			<p>Data cleaning/publishing Workshop<br> 9th November 2015<hr><br><small>André Heughebaert <br> <a href="http://www.biodiversity.be">Belgian Biodiversity Platform</a></small></p>
+				<img src="images5/ebr_logo.png" height="200" alt="EBR">
+				<img src="images5/qgis.png" height="200" alt="QGIS">
+		</section>
+
+		<section>
+			<h2>Summary</h2>
+			<hr>
+			<ol>
+				<li><a href="#/Geo">Georeferencing</a></li>
+				<li><a href="#/Loc">Locations and Coordinates</a></li>
+				<li><a href="#/Vis">Visualising</a></li>
+				<li><a href="#/Cle">Cleaning</a></li>
+				<li><a href="#/Demo">Demo</a></li>
+				<li><a href="#/Hands">Hands-on</a></li>
+			</ol>
+		</section>
+
+		<section>
+			<section id="Geo">
+				<h4>Georeferencing</h4>
+				<hr>
+				<blockquote cite="https://dx.doi.org/10.1080%2F19475683.2013.868826">To georeference means to associate something with locations in physical space. <br><small>The term is commonly used in the geographic information systems field to describe the process of associating a physical map or raster image of a map with spatial locations. Georeferencing may be applied to any kind of object or structure that can be related to a geographical location, such as points of interest, roads, places, bridges, or buildings.<br><br>
+				Hackeloeer, A.; Klasing, K.; Krisp, J.M.; Meng, L. (2014). <br>"Georeferencing: a review of methods and applications". Annals of GIS 20 (1): 61–69.</small></blockquote>
+			</section>
+			<section>
+				<h4>Georeferencing</h4>
+				<hr>
+				<img src="images5/map.png" alt="Map">
+			</section>
+		</section>
+
+		<section id="Loc">
+			<section data-background="images5/Geocentric_vs_geodetic_latitude.svg" data-background-repeat="repeat" data-background-size="100px">
+				<h4>Locations</h4>
+				<hr>
+<pre><code  data-trim contenteditable>
+Guinée équatoriale (Rio Muni), parc national de Monte Alen,dalle rocheuse d'Engong, 5 km à l'ouest du Village d'Engong.
+
+SE du Parc National de Monte Alén, près du transect Ecofac de Nkumékié, à 5300m du début du layon.
+
+Inselberg Dumu
+</code></pre>
+				<h4>Coordinates</h4>
+				<hr>
+<pre><code  data-trim contenteditable>
+N01°37,464' E10°17,943'
+
+164671 N 646197 E
+
+1,36935 N 11,3223 E
+</code></pre>
+			</section>
+			<section data-background="images5/Geocentric_vs_geodetic_latitude.svg" data-background-repeat="repeat" data-background-size="100px">
+				<h4>Geodetic Datum/ Coordinate System</h4>
+				<hr>
+<pre><code  data-trim contenteditable>
+WGS 84 World Geodetic System
+ED50 European Datum 1950
+SAD69 South American Datum 1969
+GRS 80 Geodetic Reference System 1980
+NAD83 North American Datum 1983
+WGS84 World Geodetic System 1984
+NAVD88 N. American Vertical Datum 1988
+ETRS89 European Terrestrial ReferenceSystem 1989
+GCJ-02 Chinese encrypted datum 2002
+Spatial Reference System Identifier (SRID)
+Universal Transverse Mercator (UTM)
+</code></pre>
+			</section>
+			<section>
+				<h4>Gazetteers</h4>
+				<hr>
+				<q>&ldquo;Gazetteer is a geographical dictionary that helps you to convert locations into coordinates.&rdquo;</q>
+				<p>The <a href="http://www.geonames.org/">GeoNames</a> geographical database covers all countries and contains over <b>eight million placenames</b> that are available for download free of charge.</p>
+				<img src="images5/geonames.png" alt="Geonames">
+			</section>
+		</section>
+
+		<section id="Vis">
+			<section>
+				<h4>Visualising</h4>
+				<hr>
+				<p><a href="http://docs.qgis.org/">QGIS</a> a Free and Open Source Geographic Information System</p>
+				<img src="images5/19555105112_df59273576_z.jpg" alt="QGIS">
+			</section>
+			<section>
+				<h4>Visualising - Layers</h4>
+				<hr>
+				<img src="images5/layers.gif" alt="Layers">
+			</section>
+			<section>
+				<h4>Visualising - Layers</h4>
+				<hr>
+				<ul>Different types of layers:
+					<li><b>Vector</b> (points, lines, polygones...)</li>
+					<li><b>Raster</b> (pixels image)</li>
+					<li><b>WMS</b> (Web Map Service)</li>
+					<li><b>CSV</b> (text date file with latitude/longitude)</li>
+					<li><b>GIS</b> Database (points, lines, polygones...)</li>
+			</section>
+		</section>
+		<section id="Cle">
+				<h2>Enhancing/Cleaning data</h2>
+				<hr>
+				<ul>
+					<li>Locations &rarr; coordinates</li>
+					<li class=fragment>Coordinates &rarr; Locality, Province, Country</li>
+					<hr class=fragment>
+					<li class=fragment>Coordinates swap (lat &harr; long)</li>
+					<li class=fragment>Coordinates sign (N &harr; S and E &harr; W)</li>
+					<li class=fragment>Coordinates uncertainty</li>
+					<li class=fragment>Find/remove/fix outliers</li>
+				</ul>
+		</section>
+
+		<section id="Demo">
+				<h2>Demo</h2>
+				<hr>
+				<ol>
+					<li><u>Geonames gazetteer</u>
+					<li><u>QGIS Basic</u>
+					<ul>
+						<li>Adding layers</li>
+						<li>Playing with layers</li>
+						<li>Changing properties</li>
+					</ul></li>
+					<li><u>Data entry</u>
+					<ul>
+						<li>Scratch layer</li>
+						<li>CSV layer</li>
+						<li>Database layer</li>
+					</ul></li>
+					<li><u>RBINS collections</u>
+					<li><u>BRLU herbarium</u>
+				</ol>
+		</section>
+
+		<section id="Hands">
+			<section>
+				<h2>Hands-on</h2>
+				<hr>
+				<h4>Tools you need:</h4>
+				<img src="images5/qgis.png" height="200" alt="QGIS">
+			</section>
+		</section>
+		
+		<section id="Ref" data-markdown>
+## References
+* [QGIS docs](http://docs.qgis.org/)
+* [geonames](http://www.geonames.org)
+* [BioGeomancer, Guide to Best Practices in Georeferencing](http://www.gbif.org/resource/80536)
+		</section>
+
+		<section>
+			<h2>Questions?</h2>
+			<p><a href="http://www.biodiversity.be">Belgian Biodiversity Platform</a></p>
+			<p><a href="mailto:a.heughebaert@biodiversity.be">a.heughebaert@biodiversity.be</a></p>
+			<img src="images6/BBPFlogo.png" alt="BBPF">
+			<p><small>Made with <a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a> - HTML Presentations made easy</small></p>
+		</section>
+
+	</div>
+
+</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
