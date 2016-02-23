@@ -16,3 +16,6 @@
 * [QGIS](file:///Users/aheugheb/reveal.js-master/index5.html#/)
 * [TaxonServices](file:///Users/aheugheb/reveal.js-master/index6.html#/)
 * [IPT DwC](file:///Users/aheugheb/reveal.js-master/index7.html#/)
+
+## SAFRED Kickoff meeting, Feb 2016
+* [Platform Data Mobilization](file:///Users/aheugheb/reveal.js-master/index9.html#/)
