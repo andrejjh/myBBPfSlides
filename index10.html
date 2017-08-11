@@ -1,0 +1,297 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+<section><h1>Belgian Data Gaps</h1>
+	<img class="plain" src="images10/BelgianGapFlag.png" alt="BelgianGapFlag">
+<p><small>GBIF Webinar, 23 March 2017<br>
+	<a href="mailto:a.heughebaert@biodiversity.be">André Heughebaert</a>, <a href="http://www.biodiversity.be">Belgian Biodiversity Platform</a></small></p>
+	<img class="plain" src="images10/CC-BY-SA.png" alt="CC-BY-SA">
+	<img class="plain" src="images10/logo_bbpf.png" alt="BBPf">
+</section>
+
+<section>
+	<img class="plain" src="images10/DGA.png" height="250" alt="DGA">
+	<blockquote cite="http://www.gbif.org/resource/82566">
+		<small>&ldquo;the purpose of the ‘Data Gap Analysis’ is to identify discrepancies between current and ideal states (Research Data Strategy Working Group 2008) of the entire enterprise of biodiversity data management leading up to its publishing and usage (Chavan et al. 2010).&rdquo;</small>
+	</blockquote>
+<p><small><a href="http://www.gbif.org/resource/82566">Best Practice Guide for Data Gap Analysis for Biodiversity Stakeholders<br>Arturo H. Ariño, Vishwas Chavan and Javier Otegui</a></small></p>
+
+</section>
+				<section><h2>Aims</h2>
+				<ul>
+					<li>Assess Data published by the Belgian BIF</li>
+					<li>Find our strengths and weaknesses</li>
+					<li>Determine where our Data Gaps lie</li>
+			</ul>
+<hr>
+			<h2>Assumption</h2>
+				<p>Data published from Belgium<br> should not differ from neighboring countries</p>
+			</section>
+				<section><h1>Sources</h1>
+				<img class="plain" src="images10/CountryReport.png" width="250" alt="Country Report" align="left">
+				<ul>
+					<li>2016 Country reports (Jan 2017)</li>
+					<li>GBIF.org portal</li>
+					<li>(GBIF webservices)</li>
+					<li>(Occurrences downloads)</li>
+				</ul>
+				</section>
+				<section><h1>Methodology</h1>
+					<img class="plain" src="images10/bega.png" width="250" alt="Map" align="left">
+					<ul>
+						<li>Use <strong>relative</strong>, NOT absolute numbers</li>
+						<li>Compare Belgian <strong>percentages</strong> to<br>
+							<small>France, Germany and the Netherlands <br>(all VPs since 2001)</small></li>
+						<li class="fragment highlight-green">Strength = significantly above</li>
+						<li class="fragment highlight-red">Weakness = significantly below</li>
+					</ul>
+				</section>
+				<section><h1>Topics</h1>
+				<ol>
+					<li>Type of data</li>
+					<li>Data completeness</li>
+					<li>Taxonomy, geography, time distribution</li>
+					<li>Georeferencing</li>
+					<li>Licensing</li>
+					<li>Indexing issues</li>
+					<li>Data repatriation</li>
+					<li>Multimedia</li>
+				</ol>
+				</section>
+				<section>
+				<section><h2>Results (1)</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>BasisOfRecord</th>
+								<th><img class="plain" src="images10/1489003884_Flag_of_Belgium.png" alt="BE"></th>
+								<th><img class="plain" src="images10/1489003839_Flag_of_Germany.png" alt="DE"></th>
+								<th><img class="plain" src="images10/1489003843_Flag_of_France.png" alt="FR"></th>
+								<th><img class="plain" src="images10/1489003877_Flag_of_Netherlands.png" alt="NL"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Human Obs.</td>
+								<td>72.28%</td>
+								<td>70.22%</td>
+								<td>69.19%</td>
+								<td>68.90%</td>
+							</tr>
+							<tr class="fragment highlight-green">
+								<td>Machine Obs.</td>
+								<td>20.54%</td>
+								<td>0.00%</td>
+								<td>0.00%</td>
+								<td>0.00%</td>
+							</tr>
+							<tr class="fragment highlight-red">
+								<td>Specimen</td>
+								<td>5.05%</td>
+								<td>9.97%</td>
+								<td>17.90%</td>
+								<td>29.05%</td>
+							</tr>
+							<tr class="fragment highlight-red">
+								<td>Fossil</td>
+								<td>0.00%</td>
+								<td>2.67%</td>
+								<td>0.70%</td>
+								<td>1.68%</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section><h2>Results (2)</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>TaxonGroup</th>
+							<th><img class="plain" src="images10/1489003884_Flag_of_Belgium.png" alt="BE"></th>
+							<th><img class="plain" src="images10/1489003839_Flag_of_Germany.png" alt="DE"></th>
+							<th><img class="plain" src="images10/1489003843_Flag_of_France.png" alt="FR"></th>
+							<th><img class="plain" src="images10/1489003877_Flag_of_Netherlands.png" alt="NL"></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="fragment highlight-green">
+							<td>Arachnids</td>
+							<td>2.64%</td>
+							<td>0.65%</td>
+							<td>0.02%</td>
+							<td>1.40%</td>
+						</tr>
+						<tr>
+							<td>Bony fish</td>
+							<td>4.38%</td>
+							<td>0.28%</td>
+							<td>1.07%</td>
+							<td>4.13%</td>
+						</tr>
+						<tr class="fragment highlight-green">
+							<td>Insects</td>
+							<td>15.21%</td>
+							<td>9.23%</td>
+							<td>1.88%</td>
+							<td>10.27%</td>
+						</tr>
+						<tr class="fragment highlight-red">
+							<td>Mammals</td>
+							<td>0.06%</td>
+							<td>1.40%</td>
+							<td>1.55%</td>
+							<td>0.20%</td>
+						</tr>
+						<tr class="fragment highlight-red">
+							<td>Molluscs</td>
+							<td>0.19%</td>
+							<td>0.57%</td>
+							<td>0.45%</td>
+							<td>2.09%</td>
+						</tr>
+						<tr class="fragment highlight-red">
+							<td>Sac Fungi</td>
+							<td>0.04%</td>
+							<td>0.63%</td>
+							<td>0.15%</td>
+							<td>0.63%</td>
+						</tr>
+						</tbody>
+				</table>
+			</section>
+			<section><h2>Results (3)</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>Year</th>
+							<th><img class="plain" src="images10/1489003884_Flag_of_Belgium.png" alt="BE"></th>
+							<th><img class="plain" src="images10/1489003839_Flag_of_Germany.png" alt="DE"></th>
+							<th><img class="plain" src="images10/1489003843_Flag_of_France.png" alt="FR"></th>
+							<th><img class="plain" src="images10/1489003877_Flag_of_Netherlands.png" alt="NL"></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="fragment highlight-red">
+							<td> < 1900</td>
+							<td>0.25%</td>
+							<td>0.73%</td>
+							<td>1.38%</td>
+							<td>1.07%</td>
+						</tr>
+						<tr class="fragment highlight-red">
+							<td>1900..1924</td>
+							<td>0.45%</td>
+							<td>0.70%</td>
+							<td>0.56%</td>
+							<td>3.06%</td>
+						</tr>
+						<tr>
+							<td>1925..1949</td>
+							<td>4.78%</td>
+							<td>7.56%</td>
+							<td>0.44%</td>
+							<td>5.75%</td>
+						</tr>
+						<tr>
+							<td>1950..1974</td>
+							<td>11.47%</td>
+							<td>4.13%</td>
+							<td>0.90%</td>
+							<td>10.59%</td>
+						</tr>
+						<tr>
+							<td>1975..1999</td>
+							<td>22.50%</td>
+							<td>22.74%</td>
+							<td>3.25%</td>
+							<td>41.98%</td>
+						</tr>
+						<tr class="fragment highlight-green">
+							<td>2000..2017</td>
+							<td>58.59%</td>
+							<td>25.64%</td>
+							<td>11.18%</td>
+							<td>22.56%</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+		</section>
+		<section><h2>Belgian gaps found</h2>
+			<ol> Whenever possible, we should try mobilize:
+				<li class="fragment"><strong>Specimens, Fossils and Litterature</strong> Occurrences</li>
+				<li class="fragment"><strong>under-represented</strong> taxonomic groups
+					<img class="plain" src="images10/TaxonGroups.png" height="200" alt="TaxonGroups">
+				</li>
+				<li class="fragment">Wallonia and abroad (<strong>Data Repatriation</strong>)</li>
+				<li class="fragment"><strong>Historical</strong> data collected before 1925</li>
+				<li class="fragment">with associated <strong>multimedia</strong></li>
+			</ol>
+		</section>
+		<section><h2>Take Home message</h2>
+			<img class="plain" src="images10/MindTheGap.jpg" alt="Mind The Gap">
+				<ul>
+					<li>Easy exercice ( < 2 man days)</li>
+					<li>Often confirm our feeling, <br>still some surprising results!</li>
+					<li>Baseline for mobilization strategy</li>
+					<li>Opportunity to expand our network</li>
+				</ul>
+		</section>
+		<section><h1>Thank you</h1>
+			<p><a href="mailto:a.heughebaert@biodiversity.be">André Heughebaert</a> , <a href="http://www.biodiversity.be">Belgian Biodiversity Platform</a><br>
+			<small>Made with <a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a> HTML presentation framework, icons by Vathanx.<br>This presentation is open under CC-BY-SA license.</small></p>
+			<img class="plain" src="images10/CC-BY-SA.png" alt="CC-BY-SA">
+			<img class="plain" src="images10/logo_bbpf.png" alt="BBPf">
+		</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				// Parallax background image
+				parallaxBackgroundImage: 'images10/background.jpg', // e.g. "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
+
+				    // Parallax background size
+				    parallaxBackgroundSize: '2320px 1740px', // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
+
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
